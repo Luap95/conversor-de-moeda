@@ -3,6 +3,16 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args) {
 
+        String tipoConversao = (JOptionPane.showInputDialog(null,
+                "Escolha uma opção:","Menu",
+                JOptionPane.PLAIN_MESSAGE, null,
+                TipoConversor.values(),
+                null)).toString();
+
+        double valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor que deseja converter"));
+
+        
+        /*
         JFrame jFrame = new JFrame();
         jFrame.setSize(300,300);
 
@@ -26,8 +36,8 @@ public class Main {
 
         jFrame.add(jPanel);
 
-        jFrame.setVisible(true);
-
+        jFrame.setVisible(false);
+        */
 
     }
 }
