@@ -12,7 +12,7 @@ public class Main {
                 TipoConversor.values(),
                 null)).toString();
 
-        BigDecimal valor = new BigDecimal(JOptionPane.showInputDialog("Digite o valor que deseja converter"))
-                .setScale(2, RoundingMode.HALF_EVEN);
+        Conversor conversor = new Conversor();
+        conversor.ConversorMoeda();
     }
 }
