@@ -7,9 +7,12 @@ public class Moeda {
     private TipoMoeda tipoMoeda;
     private BigDecimal valor;
 
-    public Moeda(TipoMoeda tm, double valor){
+    public Moeda(TipoMoeda tm, BigDecimal valor){
         setTipoMoeda(tm);
-        this.valor = new BigDecimal(valor).setScale(2, RoundingMode.HALF_EVEN);
+        this.valor = valor.setScale(4,RoundingMode.HALF_EVEN);
+    }
+    public Moeda(){
+
     }
 
     public void setTipoMoeda(TipoMoeda tipoMoeda) {
@@ -17,7 +20,7 @@ public class Moeda {
     }
 
     public void setValor(BigDecimal valor) {
-        this.valor = valor;
+        this.valor = valor.setScale(4,RoundingMode.HALF_EVEN);
 
     }
 
