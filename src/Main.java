@@ -5,14 +5,10 @@ import java.math.RoundingMode;
 
 public class Main {
     public static void main(String[] args) {
+        //chamando o menu principal
 
-        String tipoConversao = (JOptionPane.showInputDialog(null,
-                "Escolha uma opção:","Menu",
-                JOptionPane.PLAIN_MESSAGE, null,
-                TipoConversor.values(),
-                null)).toString();
+        MenuPrincipal.menu();
 
-        Conversor conversor = new Conversor();
-        conversor.ConversorMoeda();
+
     }
 }

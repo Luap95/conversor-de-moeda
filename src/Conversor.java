@@ -15,11 +15,17 @@ public class Conversor {
                 JOptionPane.PLAIN_MESSAGE, null,
                 TipoMoeda.values(),
                 null);
+        
+        String resposta = JOptionPane.showInputDialog("Digite o valor que deseja converter");
+        double respostaConvertida = 0;
+        try {
+            respostaConvertida = Double.parseDouble(resposta);
+        }catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Valor invalido");
+            this.ConversorMoeda();
+        }
 
-        BigDecimal valor = BigDecimal
-                .valueOf(Double.parseDouble(
-                        JOptionPane.showInputDialog("Digite o valor que deseja converter")));
-
+        BigDecimal valor = BigDecimal.valueOf(respostaConvertida);
         Moeda moedaInicial = new Moeda(tipoMoeda, valor);
 
         TipoMoeda tipoMoedaConvertida = (TipoMoeda) JOptionPane.showInputDialog(null,
@@ -37,6 +43,18 @@ public class Conversor {
                 + moedaConvertida.getTipoMoeda() + " é de " + moedaConvertida.getValor();
 
         JOptionPane.showMessageDialog(null, mensagem);
+
+        int acao = JOptionPane.showConfirmDialog(null, "Deseja continuar?",
+                "Selecione uma opção", JOptionPane.YES_NO_CANCEL_OPTION);
+
+        switch (acao){
+            case 0: MenuPrincipal.menu();
+            break;
+            case 1: JOptionPane.showMessageDialog(null, "Programa finalizado");
+            break;
+            case 2: JOptionPane.showMessageDialog(null, "Programa concluido");
+            break;
+        }
 
     }
 
