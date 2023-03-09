@@ -17,7 +17,7 @@ public class MenuPrincipal {
             case "Temperatura" :
                 JOptionPane.showMessageDialog(null, "Programa finalizado");
                 break;
-            case "" :
+            case "":
                 JOptionPane.showMessageDialog(null, "Programa finalizado");
                 break;
         }

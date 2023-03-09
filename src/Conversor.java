@@ -17,13 +17,28 @@ public class Conversor {
                 null);
         
         String resposta = JOptionPane.showInputDialog("Digite o valor que deseja converter");
-        double respostaConvertida = 0;
-        try {
-            respostaConvertida = Double.parseDouble(resposta);
-        }catch (NumberFormatException ex){
+
+        while (resposta.isEmpty()){
             JOptionPane.showMessageDialog(null, "Valor invalido");
-            this.ConversorMoeda();
+
+            resposta = JOptionPane.showInputDialog("Digite o valor que deseja converter");
+            JOptionPane.showMessageDialog(null, resposta);
         }
+
+        double respostaConvertida = 0;
+
+        while (respostaConvertida==0){
+            try {
+                respostaConvertida = Double.parseDouble(resposta);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(null, "Valor invalido");
+                respostaConvertida = 0;
+                //this.ConversorMoeda();
+            }
+
+        }
+
+        JOptionPane.showMessageDialog(null, respostaConvertida);
 
         BigDecimal valor = BigDecimal.valueOf(respostaConvertida);
         Moeda moedaInicial = new Moeda(tipoMoeda, valor);

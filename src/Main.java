@@ -7,7 +7,9 @@ public class Main {
     public static void main(String[] args) {
         //chamando o menu principal
 
-        MenuPrincipal.menu();
+//        MenuPrincipal.menu();
+        MenuMoeda mm = new MenuMoeda();
+        mm.menuConversao();
 
 
     }
