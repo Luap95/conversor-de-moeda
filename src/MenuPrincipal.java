@@ -8,11 +8,11 @@ public class MenuPrincipal {
                 JOptionPane.PLAIN_MESSAGE, null,
                 TipoConversor.values(),
                 null)).toString();
-        System.out.println(tipoConversao);
+
         switch (tipoConversao){
             case "Moeda":
-                Conversor conversor = new Conversor();
-                conversor.ConversorMoeda();
+                MenuMoeda menuMoeda = new MenuMoeda();
+                menuMoeda.menuConversao();
                 break;
             case "Temperatura" :
                 JOptionPane.showMessageDialog(null, "Programa finalizado");

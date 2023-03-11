@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class ValidaEntrada {
-    public static void btnCancel(Object obj){
+    public static void finaliza(Object obj){
         if(obj == null){
             int acao = JOptionPane.showConfirmDialog(null
                     , "Deseja retornar ao menu principal?",
@@ -19,7 +19,7 @@ public class ValidaEntrada {
     }
 
     public static double validaValor(String valor){
-        btnCancel(valor);
+        finaliza(valor);
         boolean converteu = false;
         double valorConvertido = 0;
 
@@ -29,7 +29,7 @@ public class ValidaEntrada {
                 converteu = true;
             }catch (NumberFormatException ex){
                 JOptionPane.showMessageDialog(null, "Valor invalido");
-                valor = JOptionPane.showInputDialog("Digite o valor válido");
+                valor = JOptionPane.showInputDialog("Digite um novo valor. Use somente números e . para decimais.");
 
             }
         }
