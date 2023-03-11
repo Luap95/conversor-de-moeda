@@ -1,22 +1,14 @@
 # conversor-de-moeda
-Nesta oportunidade foi solicitado para nós Devs a criação de um conversor de moeda utilizando a linguagem Java. As características solicitadas por nosso cliente são as seguintes:
+O programa funciona com as seguintes moedas:
+    - Real
+    - Dólar
+    - Euro
+    - Libra esterlina
+    - Peso argentino
+    - Peso chileno
 
-    O conversor de moeda deverá:
+Para conseguir a taxa de câmbio é utilizado a API Awesomeapi. Para mais informações sobre ela acesse https://docs.awesomeapi.com.br/.
 
-         - Converter de Reais a Dólar
-         - Converter de Reais a Euro
-         - Converter de Reais a Libras Esterlinas
-         - Converter de Reais a Peso argentino
-         - Converter de Reais a Peso Chileno
-
-Lembrando que deve ser possível também converter de forma inversa ou seja:
-
-       - Converter de Dólar a Reais
-       - Converter de Euro a Reais
-       - Converter de Libras Esterlinas a Reais
-       - Converter de Peso argentino a  Reais
-       - Converter de Peso Chileno a Reais
-
-Como desafio extra incentivamos vocês a deixar fluir sua criatividade, se posso converter moedas, será que posso tal vez adicionar a meu programa outro tipo de conversões como temperatura por exemplo?
-
-É hora de surpreender nosso cliente com uma feature que tal vez nem ele sabia que precisava.
+# Funcionamento
+Selecione qual moeda deseja converter. Posteriormente, informe o valor que deseja converter. Selecione a moeda na qual deseja converter.
+Após a entrada de dados, o resultado é emitido na tela. Depois o program perfunta se deseja retornar ao ínicio ou finalizar ao programa.
