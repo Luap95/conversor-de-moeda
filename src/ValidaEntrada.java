@@ -17,4 +17,22 @@ public class ValidaEntrada {
             }
         }
     }
+
+    public static double validaValor(String valor){
+        btnCancel(valor);
+        boolean converteu = false;
+        double valorConvertido = 0;
+
+        while (converteu == false){
+            try {
+                valorConvertido = Double.parseDouble(valor);
+                converteu = true;
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(null, "Valor invalido");
+                valor = JOptionPane.showInputDialog("Digite o valor válido");
+
+            }
+        }
+        return valorConvertido;
+    }
 }
